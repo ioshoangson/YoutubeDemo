@@ -2,13 +2,15 @@
 //  AppDelegate.m
 //  YoutubeDemo
 //
-//  Created by Hoang Son on 3/18/16.
+//  Created by Hoang Son on 3/19/16.
 //  Copyright (c) 2016 Hoang Son. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
-#define API_KEY @"AIzaSyAdmNajhU_vANpquEP7-9dZw56nOip44_A"
+#import "HomeViewController.h"
+#import "CenterViewController.h"
+#import "LeftMenuViewController.h"
+#import "Define.h"
 
 @interface AppDelegate ()
 
@@ -18,19 +20,35 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self setupRootViewController];
+    [self configUI];
     
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://www.googleapis.com/youtube/v3/videoCategories?part=snippet&key=AIzaSyCczJSgOuOdkuYa-ub5cXtzEvHFVRN3t74"]];
-    request.HTTPMethod = @"GET";
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        
-    }];
-    
-   // NSLocalizedString(<#key#>, <#comment#>)
-    
-    // Override point for customization after application launch.
     return YES;
 }
+
+- (void)setupRootViewController{
+    LeftMenuViewController *leftViewController = [[UIStoryboard storyboardWithName:MAIN_STORYBOARD bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([LeftMenuViewController class])];
+    CenterViewController *centerViewController = [[UIStoryboard storyboardWithName:MAIN_STORYBOARD bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([CenterViewController class])];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:centerViewController];
+    HomeViewController *homeViewController = [[HomeViewController alloc] initWithHomeViewController:nav leftMenu:leftViewController];
+    self.window.rootViewController = homeViewController;
+}
+
+- (void)configUI{
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0/255.0 green:196/255.0 blue:186/255.0 alpha:1.0]];
+    
+    
+    NSShadow *shadow = [NSShadow new];
+    [shadow setShadowColor: [UIColor clearColor]];
+    [shadow setShadowOffset: CGSizeMake(0.0f, 1.0f)];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                          [UIFont systemFontOfSize:17.0], NSFontAttributeName,
+                                                          [UIColor whiteColor], NSForegroundColorAttributeName,
+                                                          shadow, NSShadowAttributeName,nil]];
+    
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

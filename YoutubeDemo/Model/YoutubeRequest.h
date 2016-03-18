@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AFHTTPRequestOperationManager.h>
 
-@interface YoutubeRequest : NSObject
+typedef void (^Failure)(NSError *error, NSString *message);
+
+@interface YoutubeRequest : AFHTTPRequestOperationManager
++ (YoutubeRequest *)request;
 
 @end

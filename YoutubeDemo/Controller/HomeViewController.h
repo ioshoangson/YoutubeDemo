@@ -9,5 +9,7 @@
 #import "BaseViewController.h"
 
 @interface HomeViewController : BaseViewController
+- (id)initWithHomeViewController:(UIViewController *)centerViewController
+                        leftMenu:(UIViewController *)leftMenuViewController;
 
 @end

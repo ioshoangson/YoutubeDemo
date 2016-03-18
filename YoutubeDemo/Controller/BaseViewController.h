@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface BaseViewController : NSObject
+@interface BaseViewController : UIViewController
+@property (nonatomic, strong) UIBarButtonItem *menuBarButtonItem;
+@property (nonatomic, strong) UIBarButtonItem *backBarButtonItem;
+
+#pragma mark - Public Methods
+- (void)showAlert:(NSString *)title message:(NSString *)message;
+- (void)showHud;
+- (void)hideHud;
+- (void)menuHandler;
+- (void)backHandle;
+
 
 @end

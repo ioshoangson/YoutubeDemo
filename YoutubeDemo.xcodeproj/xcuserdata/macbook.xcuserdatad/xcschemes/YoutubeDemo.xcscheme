@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FAAA7DB71C9C456D002FAFF5"
+               BlueprintIdentifier = "FAD5C3931C9C795400A5C119"
                BuildableName = "YoutubeDemo.app"
                BlueprintName = "YoutubeDemo"
                ReferencedContainer = "container:YoutubeDemo.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FAAA7DD01C9C456D002FAFF5"
+               BlueprintIdentifier = "FAD5C3AC1C9C795400A5C119"
                BuildableName = "YoutubeDemoTests.xctest"
                BlueprintName = "YoutubeDemoTests"
                ReferencedContainer = "container:YoutubeDemo.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FAAA7DD01C9C456D002FAFF5"
+               BlueprintIdentifier = "FAD5C3AC1C9C795400A5C119"
                BuildableName = "YoutubeDemoTests.xctest"
                BlueprintName = "YoutubeDemoTests"
                ReferencedContainer = "container:YoutubeDemo.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FAAA7DB71C9C456D002FAFF5"
+            BlueprintIdentifier = "FAD5C3931C9C795400A5C119"
             BuildableName = "YoutubeDemo.app"
             BlueprintName = "YoutubeDemo"
             ReferencedContainer = "container:YoutubeDemo.xcodeproj">
@@ -76,7 +76,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FAAA7DB71C9C456D002FAFF5"
+            BlueprintIdentifier = "FAD5C3931C9C795400A5C119"
             BuildableName = "YoutubeDemo.app"
             BlueprintName = "YoutubeDemo"
             ReferencedContainer = "container:YoutubeDemo.xcodeproj">
@@ -95,7 +95,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FAAA7DB71C9C456D002FAFF5"
+            BlueprintIdentifier = "FAD5C3931C9C795400A5C119"
             BuildableName = "YoutubeDemo.app"
             BlueprintName = "YoutubeDemo"
             ReferencedContainer = "container:YoutubeDemo.xcodeproj">

@@ -9,5 +9,7 @@
 #ifndef YoutubeDemo_Define_h
 #define YoutubeDemo_Define_h
 
+#define MAIN_STORYBOARD @"Main"
+#define API_URL_PRO @""
 
 #endif

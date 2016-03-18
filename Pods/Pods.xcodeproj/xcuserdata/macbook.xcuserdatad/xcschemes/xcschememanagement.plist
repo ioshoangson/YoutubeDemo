@@ -14,7 +14,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-YoutubeDemo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,12 +32,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>27654F123DF5D97DBCED7A01C0D13382</key>
+		<key>081AD83D5023159551A25C37815976E1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>99CF166819D25B2463C63C29D79902D2</key>
+		<key>27654F123DF5D97DBCED7A01C0D13382</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B54F54DFB93BCD01DE263488EE055A08</key>
+		<key>B4ACD030ED7E343C58EC3C402C470146</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DF8600F1E0588B1F5D4C92D5AD829EDF</key>
+		<key>DC1AFBB276DC78B21815AA766A5844C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

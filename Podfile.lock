@@ -26,7 +26,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.4)
   - MBProgressHUD (~> 0.8)
-  - youtube-ios-player-helper (~> 0.1)
+  - youtube-ios-player-helper (~> 0.1.4)
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
