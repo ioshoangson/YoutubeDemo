@@ -66,13 +66,16 @@ Answer:
 3. Have you used any profiling tool for this project? If yes explain the same.
 
 Answer:
+In this project i don't have. but I know about profile instruments by xCode, in my previous experience i have been used timer profile to check how long method/code does it take? Also i have been used to check leak memory in non-ARC. 
+
+/*Wrong aswer
 Yes. I have. In application i used some common libs
 - CocoaPods: dependency manager for Swift and Objective-C Cocoa projects
 - UIScrollView+InfiniteScroll: it's category of scrollview that help handle load more with block.
 - AFNetworking: a famous library that handle request to server. Because AFNetworking designed base on NSURLConnection/NSURLSession and combine with GCD/NSOperation/NSOperationQueue. So in this application we can use NSURLConnection/NSURLSession that don't need to use AFNetworking but i added to project because i would like to use "UIImageView+AFNetworking.h" category to load image and caches.
 - MBProgressHUD: displays a translucent HUD with an indicator and/or labels while work is being done in a background thread.
 - XCDYouTubeKit: help to play video from youtube on ios application. I would like to use this lib more than YTPlayerView because i like UX of it and easy to use. 
-
+*/
 
 
 
