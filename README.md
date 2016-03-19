@@ -25,7 +25,8 @@ I have some challenges while i develop to this application.
 
 Answer:
 - Test carefully application to make sure application don't crash: follow by test case, unit test, automation test
-- Prepare icon for app follow by iOS Human Interface Guidelines
+- Prepare icon for app follow by iOS Human Interface Guidelines.
++ https://makeappicon.com/: create icon quickly
 - Prepare image for splash screen, it's display on screen in the first time application run.
 - Prepare text description about app, screenshot, video preview if would like to a video preview when use download app on Apple Store.
 - Create production certificate type of "App Store and Ad Hoc"
