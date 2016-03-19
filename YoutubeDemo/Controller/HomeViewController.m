@@ -28,10 +28,7 @@
     self = [super init];
     if (self) {
         self = [[UIStoryboard storyboardWithName:MAIN_STORYBOARD bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([HomeViewController class])];
-    
         self.centerViewController = (CenterViewController *)centerViewController;
-
-
         self.leftViewController = (LeftMenuViewController *)leftMenuViewController;
     }
     return self;
