@@ -8,6 +8,8 @@
 
 #import "BaseViewController.h"
 
+@class CategoryItem;
 @interface LeftMenuViewController : BaseViewController
+@property (nonatomic, copy) void (^clickItemAtIndexBlock)(NSIndexPath *indexPath, CategoryItem *categoryItem);
 
 @end

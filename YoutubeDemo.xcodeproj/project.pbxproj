@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		16E414E8A0E0FE0115A80994 /* libPods-YoutubeDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC26D3888A2C67A3CCBECDF9 /* libPods-YoutubeDemo.a */; };
+		FAB4B7CB1C9CDFE7009A9605 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB4B7CA1C9CDFE7009A9605 /* VideoCell.m */; };
+		FAB4B7D01C9CEFEC009A9605 /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FAB4B7CF1C9CEFEC009A9605 /* Assets.bundle */; };
 		FAD5C39A1C9C795400A5C119 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD5C3991C9C795400A5C119 /* main.m */; };
 		FAD5C39D1C9C795400A5C119 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD5C39C1C9C795400A5C119 /* AppDelegate.m */; };
-		FAD5C3A01C9C795400A5C119 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD5C39F1C9C795400A5C119 /* ViewController.m */; };
 		FAD5C3A31C9C795400A5C119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD5C3A11C9C795400A5C119 /* Main.storyboard */; };
 		FAD5C3A51C9C795400A5C119 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD5C3A41C9C795400A5C119 /* Images.xcassets */; };
 		FAD5C3A81C9C795400A5C119 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD5C3A61C9C795400A5C119 /* LaunchScreen.xib */; };
@@ -41,13 +42,14 @@
 		08C474F3D49CBB10C3CCA52A /* Pods-YoutubeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeDemo/Pods-YoutubeDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		B8BEBDB6B617835B49C7EE2E /* Pods-YoutubeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeDemo/Pods-YoutubeDemo.release.xcconfig"; sourceTree = "<group>"; };
 		EC26D3888A2C67A3CCBECDF9 /* libPods-YoutubeDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YoutubeDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB4B7C91C9CDFE7009A9605 /* VideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
+		FAB4B7CA1C9CDFE7009A9605 /* VideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
+		FAB4B7CF1C9CEFEC009A9605 /* Assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Assets.bundle; sourceTree = "<group>"; };
 		FAD5C3941C9C795400A5C119 /* YoutubeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD5C3981C9C795400A5C119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAD5C3991C9C795400A5C119 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FAD5C39B1C9C795400A5C119 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FAD5C39C1C9C795400A5C119 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FAD5C39E1C9C795400A5C119 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FAD5C39F1C9C795400A5C119 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FAD5C3A21C9C795400A5C119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAD5C3A41C9C795400A5C119 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FAD5C3A71C9C795400A5C119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -153,8 +155,6 @@
 				FAD5C3E21C9C796D00A5C119 /* View */,
 				FAD5C39B1C9C795400A5C119 /* AppDelegate.h */,
 				FAD5C39C1C9C795400A5C119 /* AppDelegate.m */,
-				FAD5C39E1C9C795400A5C119 /* ViewController.h */,
-				FAD5C39F1C9C795400A5C119 /* ViewController.m */,
 				FAD5C3A11C9C795400A5C119 /* Main.storyboard */,
 				FAD5C3A41C9C795400A5C119 /* Images.xcassets */,
 				FAD5C3A61C9C795400A5C119 /* LaunchScreen.xib */,
@@ -219,6 +219,7 @@
 		FAD5C3D11C9C796D00A5C119 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				FAB4B7CF1C9CEFEC009A9605 /* Assets.bundle */,
 				FAD5C3D21C9C796D00A5C119 /* UIScrollView+InfiniteScroll.h */,
 				FAD5C3D31C9C796D00A5C119 /* UIScrollView+InfiniteScroll.m */,
 			);
@@ -262,6 +263,8 @@
 			children = (
 				FAD5C4121C9C81AE00A5C119 /* CategoryCell.h */,
 				FAD5C4131C9C81AE00A5C119 /* CategoryCell.m */,
+				FAB4B7C91C9CDFE7009A9605 /* VideoCell.h */,
+				FAB4B7CA1C9CDFE7009A9605 /* VideoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -269,8 +272,8 @@
 		FAD5C4031C9C7A4F00A5C119 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FAD5C43B1C9C89A200A5C119 /* HomeViewController.m */,
 				FAD5C3C01C9C796D00A5C119 /* HomeViewController.h */,
+				FAD5C43B1C9C89A200A5C119 /* HomeViewController.m */,
 			);
 			name = HomeViewController;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB4B7D01C9CEFEC009A9605 /* Assets.bundle in Resources */,
 				FAD5C3FF1C9C796D00A5C119 /* Localized.strings in Resources */,
 				FAD5C3A31C9C795400A5C119 /* Main.storyboard in Resources */,
 				FAD5C4371C9C897300A5C119 /* back_icon@2x.png in Resources */,
@@ -454,9 +458,9 @@
 			files = (
 				FAD5C3ED1C9C796D00A5C119 /* PlayVideoViewController.m in Sources */,
 				FAD5C43E1C9C89AE00A5C119 /* BaseViewController.m in Sources */,
+				FAB4B7CB1C9CDFE7009A9605 /* VideoCell.m in Sources */,
 				FAD5C3FD1C9C796D00A5C119 /* YoutubeRequest.m in Sources */,
 				FAD5C3FB1C9C796D00A5C119 /* VideoItem.m in Sources */,
-				FAD5C3A01C9C795400A5C119 /* ViewController.m in Sources */,
 				FAD5C4101C9C7C4E00A5C119 /* CenterViewController.m in Sources */,
 				FAD5C3F11C9C796D00A5C119 /* Global.m in Sources */,
 				FAD5C4141C9C81AE00A5C119 /* CategoryCell.m in Sources */,

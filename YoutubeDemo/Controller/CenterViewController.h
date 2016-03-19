@@ -8,7 +8,9 @@
 
 #import "BaseViewController.h"
 
+@class CategoryItem;
 @interface CenterViewController : BaseViewController
 @property (nonatomic, copy) void (^clickMenuBlock)(void);
+- (void)refreshListVideoByCategoryFromYoutubeWithId:(CategoryItem *)categoryItem;
 
 @end

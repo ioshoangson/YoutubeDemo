@@ -10,6 +10,9 @@
 
 @class CategoryItem;
 @interface CategoryCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel *titleCategoryLabel;
+@property (nonatomic, weak) IBOutlet UIView *firstSelectView;
+@property (nonatomic, assign) BOOL firstSelect;
 - (void)setData:(CategoryItem *)categoryItem;
 
 @end

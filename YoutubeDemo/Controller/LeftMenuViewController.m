@@ -7,6 +7,8 @@
 //
 
 #import "LeftMenuViewController.h"
+#import "HomeViewController.h"
+#import "YoutubeRequest.h"
 #import "CategoryCell.h"
 
 static NSString *CategoryCellIdentifier = @"CategoryCellIdentifier";
@@ -31,7 +33,12 @@ static NSString *CategoryCellIdentifier = @"CategoryCellIdentifier";
 
 #pragma mark - Request Data
 - (void)requestListCategoryFromYoutube{
-    
+    [[YoutubeRequest request] listCategory:^(NSArray *results) {
+        self.categoryArray = results;
+        [self.menuTableView reloadData];
+    } failure:^(NSError *error, NSString *message) {
+        
+    }];
 }
 
 #pragma mark - TableView Datasource
@@ -40,18 +47,40 @@ static NSString *CategoryCellIdentifier = @"CategoryCellIdentifier";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [self.categoryArray count] + 30;
+    return [self.categoryArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CategoryCell *categoryCell = [tableView dequeueReusableCellWithIdentifier:CategoryCellIdentifier forIndexPath:indexPath];
-    [categoryCell setData:nil];
+    CategoryItem *category = [self.categoryArray objectAtIndex:indexPath.row];
+    [categoryCell setData:category];
+    [self configSytleCell:categoryCell indexPath:indexPath];
     return categoryCell;
 }
 
+- (void)configSytleCell:(CategoryCell *)cell indexPath:(NSIndexPath *)indexPath{
+    UIView *myBackView = [[UIView alloc] initWithFrame:cell.frame];
+    myBackView.backgroundColor = [UIColor redColor];
+    cell.selectedBackgroundView = myBackView;
+    if (indexPath.row == 0) {
+        [cell setFirstSelect:YES];
+    }else{
+        [cell setFirstSelect:NO];
+    }
+}
+
+
+
 #pragma mark - TableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    CategoryCell *cell = (CategoryCell *)[tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    [cell setFirstSelect:NO];
     
+    [[HomeViewController share] hideMenu:^{
+        if (self.clickItemAtIndexBlock) {
+            self.clickItemAtIndexBlock(indexPath, [self.categoryArray objectAtIndex:indexPath.row]);
+        }
+    }];
 }
 
 @end

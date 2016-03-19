@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface BaseObject : NSObject
+@property (nonatomic, strong) NSDictionary *jsonData;
++ (id)instanceFromData:(NSDictionary *)jsonData;
+- (void)parseData;
 
 @end

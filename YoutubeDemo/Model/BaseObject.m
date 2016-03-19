@@ -9,5 +9,15 @@
 #import "BaseObject.h"
 
 @implementation BaseObject
++ (id)instanceFromData:(NSDictionary *)jsonData
+{
+    BaseObject *instance = [[self alloc] init];
+    instance.jsonData = jsonData;
+    [instance parseData];
+    return instance;
+}
+
+- (void)parseData{
+}
 
 @end

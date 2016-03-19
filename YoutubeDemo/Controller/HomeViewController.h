@@ -9,7 +9,10 @@
 #import "BaseViewController.h"
 
 @interface HomeViewController : BaseViewController
++ (HomeViewController *)share;
 - (id)initWithHomeViewController:(UIViewController *)centerViewController
                         leftMenu:(UIViewController *)leftMenuViewController;
+- (void)showMenu:(void (^)(void))complete;
+- (void)hideMenu:(void (^)(void))complete;
 
 @end

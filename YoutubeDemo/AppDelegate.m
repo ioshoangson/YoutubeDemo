@@ -10,6 +10,7 @@
 #import "HomeViewController.h"
 #import "CenterViewController.h"
 #import "LeftMenuViewController.h"
+#import "YoutubeRequest.h"
 #import "Define.h"
 
 @interface AppDelegate ()
@@ -20,9 +21,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self loadListCategory];
     [self setupRootViewController];
     [self configUI];
-    
     return YES;
 }
 
@@ -35,8 +36,9 @@
 }
 
 - (void)configUI{
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0/255.0 green:196/255.0 blue:186/255.0 alpha:1.0]];
-    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0/255.0 green:196/255.0 blue:186/255.0 alpha:0.6]];
+    [[UINavigationBar appearance] setTranslucent:YES];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     NSShadow *shadow = [NSShadow new];
     [shadow setShadowColor: [UIColor clearColor]];
@@ -47,6 +49,14 @@
                                                           [UIColor whiteColor], NSForegroundColorAttributeName,
                                                           shadow, NSShadowAttributeName,nil]];
     
+}
+
+- (void)loadListCategory{
+    [[YoutubeRequest request] listCategory:^(NSArray *results) {
+        self.listCategory = results;
+        [[NSNotificationCenter defaultCenter] postNotificationName:REFRESH_LIST_VIDEO_NOTIFI object:self.listCategory];
+    } failure:^(NSError *error, NSString *message) {
+    }];
 }
 
 

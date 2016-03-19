@@ -9,5 +9,8 @@
 #import "BaseObject.h"
 
 @interface CategoryItem : BaseObject
+@property (nonatomic, assign) int categoryId;
+@property (nonatomic, copy) NSString *titleCategory;
+@property (nonatomic, copy) NSString *channelId;
 
 @end

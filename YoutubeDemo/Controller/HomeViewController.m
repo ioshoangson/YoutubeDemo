@@ -9,10 +9,11 @@
 #import "HomeViewController.h"
 #import "CenterViewController.h"
 #import "LeftMenuViewController.h"
+#import "CategoryItem.h"
 #import "Define.h"
 
 #define TIME_ANIMATE 0.25
-#define MARGIN 100
+#define MARGIN 120
 
 @interface HomeViewController ()
 @property (nonatomic, assign) BOOL isShowLeftMenu;
@@ -42,6 +43,11 @@
     return centerViewController;
 }
 
++ (HomeViewController *)share{
+    HomeViewController *rootViewController = (HomeViewController *)[[[UIApplication sharedApplication].delegate window] rootViewController];
+    return rootViewController;
+}
+
 #pragma mark - View Life Cycle
 - (void)viewDidLoad{
     [super viewDidLoad];
@@ -55,6 +61,12 @@
         [self addChildViewController:self.leftViewController];
         [self.view addSubview:self.leftViewController.view];
         [self.leftViewController didMoveToParentViewController:self];
+        
+        //Handle selected catetgory item
+        __weak typeof(self) weakself = self;
+        [self.leftViewController setClickItemAtIndexBlock:^(NSIndexPath *indexPath, CategoryItem *category) {
+            [[weakself findCenterViewController] refreshListVideoByCategoryFromYoutubeWithId:category];
+        }];
     }
     
     //Add container center view above left menu
@@ -92,6 +104,7 @@
     //Animation for centerview
     [UIView animateWithDuration:TIME_ANIMATE animations:^{
         self.centerViewController.view.frame = CGRectMake(self.centerViewController.view.frame.size.width - MARGIN, 0, self.centerViewController.view.frame.size.width, self.centerViewController.view.frame.size.height);
+        self.centerViewController.view.transform = CGAffineTransformMakeScale(0.9, 0.9);
     } completion:^(BOOL finished) {
         if (finished) {
             if (complete) {
@@ -106,6 +119,7 @@
     
     //Reset center view
     [UIView animateWithDuration:TIME_ANIMATE animations:^{
+        self.centerViewController.view.transform = CGAffineTransformIdentity;
         self.centerViewController.view.frame = CGRectMake(0, 0, self.centerViewController.view.frame.size.width, self.centerViewController.view.frame.size.height);
     } completion:^(BOOL finished) {
         if (finished) {

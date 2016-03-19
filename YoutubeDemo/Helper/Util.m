@@ -7,7 +7,16 @@
 //
 
 #import "Util.h"
+#import "Define.h"
 
 @implementation Util
++ (NSString *)maxResults{
+    if (IS_IPAD) {
+        return MAX_RESULTS_IPAD;
+    }
+    return MAX_RESULTS_IPHONE;
+}
+
+
 
 @end

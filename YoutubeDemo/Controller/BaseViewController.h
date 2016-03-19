@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseViewController : UIViewController
+@property (nonatomic, copy) NSString *nextPageToken;
 @property (nonatomic, strong) UIBarButtonItem *menuBarButtonItem;
 @property (nonatomic, strong) UIBarButtonItem *backBarButtonItem;
 

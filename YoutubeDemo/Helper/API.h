@@ -9,7 +9,8 @@
 #ifndef YoutubeDemo_API_h
 #define YoutubeDemo_API_h
 
-#define API_URL_PRO @"111"
-
+#define API_URL_PRO @"https://www.googleapis.com/youtube/v3/"
+#define LIST_CATEGORY @"videoCategories?"
+#define SEARCH @"search?"
 
 #endif

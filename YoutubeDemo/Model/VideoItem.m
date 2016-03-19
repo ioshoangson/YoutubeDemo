@@ -10,4 +10,11 @@
 
 @implementation VideoItem
 
+- (void)parseData{
+    self.videoId = self.jsonData[@"id"][@"videoId"];
+    self.titleVideo = self.jsonData[@"snippet"][@"title"];
+    self.descriptionVideo = self.jsonData[@"snippet"][@"description"];
+    self.thumbnailsUrl = self.jsonData[@"snippet"][@"thumbnails"][@"medium"][@"url"];
+}
+
 @end

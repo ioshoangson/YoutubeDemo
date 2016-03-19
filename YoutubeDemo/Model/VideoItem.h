@@ -9,5 +9,9 @@
 #import "BaseObject.h"
 
 @interface VideoItem : BaseObject
+@property (nonatomic, copy) NSString *videoId;
+@property (nonatomic, copy) NSString *titleVideo;
+@property (nonatomic, copy) NSString *descriptionVideo;
+@property (nonatomic, copy) NSString *thumbnailsUrl;
 
 @end

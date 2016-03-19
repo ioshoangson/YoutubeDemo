@@ -8,6 +8,8 @@
 
 #import "BaseViewController.h"
 
+@class VideoItem;
 @interface PlayVideoViewController : BaseViewController
+@property (nonatomic, strong) VideoItem *videoItem;
 
 @end
